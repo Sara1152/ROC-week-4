@@ -1,23 +1,28 @@
 import logo from './logo.svg';
-import './App.css';
+import './App.scss';
+import { PolylineOutlined } from '@ricons/material'
+import { Icon } from '@ricons/utils'
+import Card from './components/Card'
+import Container from './components/Layout/Container.js';
+import Button from './components/Buttons.js';
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+   <div id="app">
+      <Container>
+        <Card
+          title="Heartsteel yone"
+          text="<3"
+          image="https://pbs.twimg.com/media/F9q-9VnWEAA0Gq_.jpg:large"
+          actions={
+            <>
+              <Button variant="secondary" text="Love" />
+              <Button variant="danger" text="Danger" />
+            </>
+          }
+        />
+      </Container>
     </div>
   );
 }
